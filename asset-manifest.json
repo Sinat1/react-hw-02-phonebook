@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sinat1/react-hw-02-phonebook/static/css/main.7acaea2f.css",
+    "main.js": "/Sinat1/react-hw-02-phonebook/static/js/main.e9b4bbbf.js",
+    "index.html": "/Sinat1/react-hw-02-phonebook/index.html",
+    "main.7acaea2f.css.map": "/Sinat1/react-hw-02-phonebook/static/css/main.7acaea2f.css.map",
+    "main.e9b4bbbf.js.map": "/Sinat1/react-hw-02-phonebook/static/js/main.e9b4bbbf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.e9b4bbbf.js"
+  ]
+}
