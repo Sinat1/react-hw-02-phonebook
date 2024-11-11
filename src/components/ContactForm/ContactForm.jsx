@@ -9,6 +9,7 @@ import {
   FormErrorMessage,
   FormBtn,
 } from './ContactForm.styled';
+import PropTypes from 'prop-types';
 
 const initialValues = {
   name: '',
@@ -19,6 +20,7 @@ const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
   number: yup.string().min(6).max(12).required('Phone number is required'),
 });
+
 const ContactForm = ({ onSubmit }) => {
   const handleSubmit = (values, { resetForm }) => {
     onSubmit(values.name, values.number);
@@ -50,6 +52,10 @@ const ContactForm = ({ onSubmit }) => {
   );
 };
 
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
 export default ContactForm;
 
 // class ContactForm extends Component {
@@ -78,9 +84,8 @@ export default ContactForm;
 //   render() {
 //     const { name, number } = this.state;
 //     return (
-//       <Formik>
 //         <FormTitle>Phonebook</FormTitle>
-//         <FormikForm onSubmit={this.handleSubmit}>
+//         <Form onSubmit={this.handleSubmit}>
 //           <FormLabel htmlFor="name">
 //             Name:
 //             <FormInput
@@ -100,8 +105,7 @@ export default ContactForm;
 //             />
 //           </FormLabel>
 //           <button type="submit">Add contact</button>
-//         </FormikForm>
-//       </Formik>
+//         </Form>
 //     );
 //   }
 // }
